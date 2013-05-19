@@ -21,8 +21,12 @@ class Example extends BaseController {
 		
 		// $stuff = Model::load('example/stuff');
 		// echo $stuff->do_stuff();
+		
+		// This line sets some data we want to use in the view
+		$data['title'] = "Welcome to Feather";
 
-		View::load('feather/default');
+		// Load the view, and pass the data to it
+		View::load('feather/default', $data);
 	}
 
 }
