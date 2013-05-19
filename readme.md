@@ -8,13 +8,13 @@ Feather is an incredibly small custom PHP framework. It is MVC-based, but that's
 
 ### Getting Started
 
-Extract everything to your server. The contents of the public folder should be where the root of your site is, so the app, system and vendor folders are all kept "behind the scenes". If you wish to rename the public folder, change the setting in app/config.php
+Extract everything to your server. The contents of the public folder should be where the root of your site is, so the app, system and vendor folders are all kept "behind the scenes". If you wish to rename the public folder, change the ```PUBLIC_FOLDER``` setting in app/config.php
 
 #### Controllers
 
 To create a controller, make a new file with the same name as where you want the page to appear. For example, if you want the controller to deal with yoursite.com/users, your file would be called users.php. This should contain a class with the same name (but with the first letter capitalised), which extends BaseController. Each function represents a page, with ```index()``` dealing with the root page. There is a commented example at app/controllers/example.php.
 
-To change the default controller, change the DEFAULT_CONTROLLER setting in app/config.php
+To change the default controller, change the ```DEFAULT_CONTROLLER``` setting in app/config.php
 
 #### Views
 
