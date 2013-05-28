@@ -10,7 +10,7 @@ class Router {
 	}
 
 	/**
-	 * list_segments()
+	 * list_segments
 	 *
 	 * Returns a list of segments according to the contents of the URI
 	 * 
@@ -50,6 +50,13 @@ class Router {
 			return FALSE;
 	}
 
+	/**
+	 * get_controller
+	 *
+	 * Returns the controller and function requested by the user according to the segments
+	 * 
+	 * @return object
+	 */
 	public static function get_controller()
 	{
 		// In this instance we'll just get all the segments and do the array ourselves.

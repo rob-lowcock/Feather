@@ -5567,3 +5567,10 @@ h4 {
 .row.narrow code {
   color: #333;
 }
+
+/* line 31, ../sass/screen.scss */
+pre {
+  border: 1px solid #cccccc;
+  background-color: #eee;
+  padding: 10px;
+}

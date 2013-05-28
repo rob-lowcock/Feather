@@ -4,6 +4,12 @@
 define('DEFAULT_CONTROLLER', 'example');
 
 // The name of the directory containing index.php
-define('PUBLIC_FOLDER', 'public')
+define('PUBLIC_FOLDER', 'public');
+
+// Database settings
+define('DB_SERVER', 'localhost');
+define('DB_NAME', 'feather');
+define('DB_USER', 'username');
+define('DB_PASSWORD', 'password');
 
 ?>

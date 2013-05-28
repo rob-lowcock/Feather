@@ -18,10 +18,9 @@ class Example extends BaseController {
 	public function index()
 	{
 		// The following commented lines load a model and execute a function from that model
-		
 		// $stuff = Model::load('example/stuff');
 		// echo $stuff->do_stuff();
-		
+
 		// This line sets some data we want to use in the view
 		$data['title'] = "Welcome to Feather";
 

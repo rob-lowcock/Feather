@@ -15,7 +15,6 @@ class Exception extends BaseException {}
 
 $run     = new Run;
 $handler = new PrettyPageHandler;
-$handler->setEditor('sublime');
 
 $run->pushHandler($handler);
 $run->register();
@@ -25,5 +24,16 @@ require_once 'router.php';
 require_once 'view.php';
 require_once 'model.php';
 require_once 'basecontroller.php';
+require_once 'database.php';
+require_once 'orm.php';
+
+if ($handle = opendir('../app/models/orm')) {
+    while (false !== ($entry = readdir($handle))) {
+        if ($entry != "." && $entry != ".." && stripos(strrev($entry), 'php.') === 0) {
+            require_once '../app/models/orm/'.$entry;
+        }
+    }
+    closedir($handle);
+}
 
 ?>
