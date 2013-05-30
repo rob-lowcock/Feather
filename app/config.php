@@ -9,7 +9,7 @@ define('PUBLIC_FOLDER', 'public');
 // Database settings
 define('DB_SERVER', 'localhost');
 define('DB_NAME', 'feather');
-define('DB_USER', 'username');
-define('DB_PASSWORD', 'password');
+define('DB_USER', 'root');
+define('DB_PASSWORD', '');
 
 ?>
