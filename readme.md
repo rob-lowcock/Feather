@@ -2,6 +2,8 @@
 
 ## Feather PHP Framework v0.1
 
+[![Build Status](https://travis-ci.org/BobLoco/Feather.png?branch=master)](https://travis-ci.org/BobLoco/Feather)
+
 **This is an initial sample of code, and is subject to significant change.** There's also a lot missing (such as anything to do with a database) so it's probably best to avoid actually using this framework for now.
 
 Feather is an incredibly small custom PHP framework. It is MVC-based, but that's pretty much all there is to it.
