@@ -12,17 +12,30 @@ class Orm {
 		return 'hello';
 	}
 
-	public static function find($id)
+	public static function find($param)
 	{
 		$db = new Database;
 		$handler = $db->connect();
 
-		$assignments = array(
-				':id' => $id
-			);
-
 		$table = 'SELECT * FROM '.self::table_name();
-		$sql = $table.' WHERE id = :id LIMIT 1';
+
+		if ( ! is_array($param) ) {
+			$assignments = array(
+					':id' => $id
+				);
+			
+			$sql = $table.' WHERE id = :id LIMIT 1';
+		} else {
+			foreach ($param as $k => $v) {
+				$assignments[':'.$k] = $v;
+
+				$where[] = $k.' = :'.$k;
+			}
+
+			$where = implode(' AND ', $where);
+			$sql = $table.' WHERE '.$where.' LIMIT 1';
+		}
+
 
 		$sth = $handler->prepare($sql);
 		$sth->execute($assignments);

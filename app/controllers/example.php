@@ -28,14 +28,4 @@ class Example extends BaseController {
 		View::load('feather/default', $data);
 	}
 
-	public function test()
-	{
-		$db = new Database();
-		$handler = $db->connect();
-
-		echo "<pre>";
-		var_dump($handler);
-		echo "</pre>";
-	}
-
 }
