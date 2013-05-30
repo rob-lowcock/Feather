@@ -7,15 +7,27 @@ class Orm {
 		return strtolower(get_called_class()).'s';
 	}
 
+	public function demo()
+	{
+		return 'hello';
+	}
+
 	public static function find($id)
 	{
 		$db = new Database;
 		$handler = $db->connect();
 
-		$sql = 'SELECT * FROM '.self::table_name().' WHERE id='.$id.' LIMIT 1';
+		$assignments = array(
+				':id' => $id
+			);
 
-		$handler = $handler->query($sql);
-		return $handler->fetch();
+		$table = 'SELECT * FROM '.self::table_name();
+		$sql = $table.' WHERE id = :id LIMIT 1';
+
+		$sth = $handler->prepare($sql);
+		$sth->execute($assignments);
+
+		return $sth->fetch();
 	}
 
 	public static function all()
@@ -25,8 +37,10 @@ class Orm {
 
 		$sql = 'SELECT * FROM '.self::table_name();
 
-		$handler = $handler->query($sql);
-		return $handler->fetchAll();
+		$sth = $handler->prepare($sql);
+		$sth->execute();
+
+		return $sth->fetchAll();
 	}
 
 }

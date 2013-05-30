@@ -1,5 +1,6 @@
 {
 	"require" : {
-		"filp/whoops": "1.0.*"
+		"filp/whoops": "1.0.*",
+		"phpunit/phpunit": "3.7.*"
 	}
 }
