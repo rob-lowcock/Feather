@@ -25,6 +25,8 @@ class Router {
 
 		if ($segment_string)
 			return explode('/', $segment_string);
+		else
+			return array();
 	}
 	
 	/**

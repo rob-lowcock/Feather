@@ -14,6 +14,20 @@ class databaseTest extends PHPUnit_Framework_TestCase {
 		$this->assertInstanceOf('PDO', $handler);
 	}
 
+	public function testConnectFail()
+	{
+		$db = new Database();
+
+		try {
+			$handler = $db->connect('INVALID', 'INVALID', 'INVALID', FALSE);
+			$this->fail('No exception has been raised');
+		}
+		catch (PDOException $expected) {
+
+		}
+
+	}
+
 }
 
 ?>

@@ -5539,7 +5539,7 @@ table tfoot tr td {
 
 /* line 3, ../sass/screen.scss */
 body {
-  background-color: #f3f3f3;
+  background-color: #fcfcfc;
   color: #555;
   text-align: center;
 }
@@ -5548,27 +5548,32 @@ body {
 h1 {
   font-weight: 100;
   color: #555;
-  margin: 100px 0 0 0;
+  margin: 0;
 }
 
 /* line 15, ../sass/screen.scss */
+.welcome {
+  margin: 15% 0;
+}
+
+/* line 19, ../sass/screen.scss */
 h4 {
   color: #888;
   font-size: 0.8em;
   margin-bottom: 50px;
 }
 
-/* line 21, ../sass/screen.scss */
+/* line 25, ../sass/screen.scss */
 .row.narrow {
   width: 600px;
   text-align: left;
 }
-/* line 25, ../sass/screen.scss */
+/* line 29, ../sass/screen.scss */
 .row.narrow code {
   color: #333;
 }
 
-/* line 31, ../sass/screen.scss */
+/* line 35, ../sass/screen.scss */
 pre {
   border: 1px solid #cccccc;
   background-color: #eee;

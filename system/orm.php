@@ -7,11 +7,6 @@ class Orm {
 		return strtolower(get_called_class()).'s';
 	}
 
-	public function demo()
-	{
-		return 'hello';
-	}
-
 	public static function find($param)
 	{
 		$db = new Database;
@@ -21,7 +16,7 @@ class Orm {
 
 		if ( ! is_array($param) ) {
 			$assignments = array(
-					':id' => $id
+					':id' => $param
 				);
 			
 			$sql = $table.' WHERE id = :id LIMIT 1';

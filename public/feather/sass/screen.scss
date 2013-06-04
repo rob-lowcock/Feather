@@ -1,7 +1,7 @@
 @import "foundation";
 
 body {
-	background-color: #f3f3f3;
+	background-color: #fcfcfc;
 	color: #555;
 	text-align: center;
 }
@@ -9,7 +9,11 @@ body {
 h1 {
 	font-weight: 100;
 	color: #555;
-	margin: 100px 0 0 0;
+	margin: 0;
+}
+
+.welcome {
+	margin: 15% 0;
 }
 
 h4 {
