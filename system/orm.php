@@ -1,6 +1,7 @@
 <?php
 
-class Orm {
+class Orm
+{
 
 	public function table_name()
 	{
@@ -14,7 +15,7 @@ class Orm {
 
 		$table = 'SELECT * FROM '.self::table_name();
 
-		if ( ! is_array($param) ) {
+		if (!is_array($param)) {
 			$assignments = array(
 					':id' => $param
 				);
@@ -43,7 +44,7 @@ class Orm {
 		$db = new Database;
 		$handler = $db->connect();
 
-		$sql = 'SELECT * FROM '.self::table_name();
+		$sql = 'SELECT * FROM ' . self::table_name();
 
 		$sth = $handler->prepare($sql);
 		$sth->execute();

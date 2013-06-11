@@ -1,13 +1,14 @@
 <?php
 
-class Model {
+class Model
+{
 	
 	public static function load($file)
 	{
-		$path = '../app/models/'.$file.'.php';
+		$path = '../app/models/' . $file . '.php';
 
-		if ( ! file_exists($path) ) {
-			throw new Exception('Model '.$file.' not found');
+		if (!file_exists($path)) {
+			throw new Exception('Model ' . $file . ' not found');
 		} else {
 			require_once $path;
 

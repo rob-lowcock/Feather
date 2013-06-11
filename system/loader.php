@@ -30,7 +30,7 @@ require_once 'orm.php';
 if ($handle = opendir('../app/models/orm')) {
     while (false !== ($entry = readdir($handle))) {
         if ($entry != "." && $entry != ".." && stripos(strrev($entry), 'php.') === 0) {
-            require_once '../app/models/orm/'.$entry;
+            require_once '../app/models/orm/' . $entry;
         }
     }
     closedir($handle);

@@ -1,6 +1,7 @@
 <?php
 
-class Router {
+class Router
+{
 
 	public static function base_url()
 	{
@@ -40,13 +41,13 @@ class Router {
 	 */
 	public static function segment($number = null)
 	{
-		if ( ! is_int($number) ) {
+		if (!is_int($number)) {
 			throw new Exception("Segment number not an integer");
 		}
 
 		$segments = self::list_segments();
 
-		if ( isset($segments[$number - 1]) )
+		if (isset($segments[$number - 1]))
 			return $segments[$number - 1];
 		else
 			return FALSE;
@@ -74,7 +75,7 @@ class Router {
 
 		$location = '../app/controllers/'.$file.'.php';
 		
-		if ( ! file_exists($location) ) {
+		if (!file_exists($location)) {
 			throw new Exception($file . " controller not found. TEMP MESSAGE: SHOULD 404");
 			return FALSE;
 		} else {
