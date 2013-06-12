@@ -2,7 +2,10 @@
 
 class Router
 {
-
+	/**
+	 * return the root url of the site
+	 * @return string
+	 */
 	public static function base_url()
 	{
 		$structure = substr($_SERVER['PHP_SELF'], 0, -9);

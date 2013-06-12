@@ -1,8 +1,17 @@
 <?php
-
+/**
+ * Model class
+ * 
+ * Provide functionality for loading models
+ */
 class Model
 {
-	
+	/**
+	 * load a model
+	 * 
+	 * @param  string $file The model / file name
+	 * @return object       The model
+	 */
 	public static function load($file)
 	{
 		$path = '../app/models/' . $file . '.php';

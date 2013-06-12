@@ -2,7 +2,12 @@
 
 class View
 {
-	
+	/**
+	 * load a view
+	 * @param  string 	$file 	the filename
+	 * @param  mixed 	$data 	any data that should be loaded in
+	 * @return void
+	 */
 	public static function load($file, $data = NULL)
 	{
 		$path = '../app/views/' . $file . '.php';
