@@ -1,3 +1,7 @@
+# ⚠️ Deprecated
+
+This repo is no longer maintained.
+
 # Readme
 
 ## Feather PHP Framework v0.1
